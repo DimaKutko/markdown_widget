@@ -116,7 +116,9 @@ class _EditMarkdownPageState extends State<EditMarkdownPage> {
 
 launchURL(String? url) async {
   if (url == null) throw 'No url found!';
+  // ignore: deprecated_member_use
   if (await canLaunch(url)) {
+    // ignore: deprecated_member_use
     await launch(url);
   } else {
     throw 'Could not launch $url';
